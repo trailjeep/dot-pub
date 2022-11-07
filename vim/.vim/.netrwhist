@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='/home/jeff/.config/pyradio'
-let g:netrw_dirhist_3='/home/jeff/.mozilla/firefox/Jeff'
-let g:netrw_dirhist_2='/home/jeff/.config/powerline'
-let g:netrw_dirhist_1='/home/jeff/.conky-vision'

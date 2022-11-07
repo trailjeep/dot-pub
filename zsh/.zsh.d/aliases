@@ -85,6 +85,7 @@ alias ifconfig='echo -e "\n** Deprecated: use ip **\n"; ip a'
 
 alias df='df -h'	# disk free human readable
 alias du='du -hx'	# disk usage human readable
+alias ncdu='ncdu -x' # do not cross fs boundaries
 
 alias more='less'	# less is more
 alias vi='vim'
@@ -169,8 +170,11 @@ if $(command -v tmatrix >/dev/null 2>&1); then
     alias matrix='tmatrix -t `echo "$USER@$HOSTNAME"`'
 fi
 
-if $(command -v cheat.sh >/dev/null 2>&1); then
+if $(command -v cht.sh >/dev/null 2>&1); then
     alias cht='cht.sh'
+    kbd() {
+        cht.sh kbd:"$1"
+    }
 fi
 
 # calc plasmoid
@@ -188,3 +192,7 @@ if $(command -v docker >/dev/null 2>&1); then
         alias dive='docker run --rm -it --name dive -v /var/run/docker.sock:/var/run/docker.sock jauderho/dive'
     fi
 fi
+
+# sudo - use user aliases
+alias sudo='sudo '
+
